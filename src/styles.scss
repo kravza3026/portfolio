@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --base-color: #041C32;
+  --shadow-color: #04293A;
+  --texture-color: #064663;
+  --text-color: #ECB365;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  //background-image: url("/assets/images/bg.jpg");
+  background-color: #383838;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
