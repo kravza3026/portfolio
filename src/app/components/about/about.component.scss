@@ -11,3 +11,12 @@
    color: #041C32;
   }
 }
+figure{
+  width: 30rem;
+  border: 15px solid grey;
+  border-radius: 100%;
+  img{
+    border-radius: 100%;
+    filter: opacity(.8);
+  }
+}
