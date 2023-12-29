@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --base-color: #191919;
+  --base-color: rgb(25, 25, 25);
   --shadow-color: #04293A;
   --texture-color: #064663;
   --text-color: #ECB365;
@@ -14,12 +14,34 @@
 body{
   //background-image: url("/assets/images/bg.jpg");
   background-color: #191919;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  overflow-x: hidden;
+
 }
 
 
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #2be0e2;
+  --sb-size: 10px;
+
+  scrollbar-color: var(--sb-thumb-color)
+  var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+
+}
 
 
 

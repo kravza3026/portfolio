@@ -1,9 +1,30 @@
-header{
-  nav{
-    background-color: var(--base-color);
-
-  }
+.header{
+  nav{height: 95svh}
+  height: 100svh;
   li{
     color: var(--text-color);
+    padding:15px 0;
+    width: 17rem;
+    left: 0;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.6rem;
+    transition: .3s ease;
+    &:hover{
+      transform: scale(1.1);
+      transition: .3s ease;
+      text-shadow: 4px 4px 2px rgba(3,218,198,0.6);
+    }
   }
+  .socials-box{
+    width: 17rem;
+  }
+.nav-socials{
+  ul{width: 100%}
+  li{
+    color: #03dac6;
+    margin: 5px;
+    font-size: 2rem;
+  }
+}
 }

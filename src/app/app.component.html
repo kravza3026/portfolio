@@ -1,25 +1,38 @@
 <div class="content">
-<header class="sticky top-0 z-20">
-  <app-header></app-header>
-</header>
-  <main class="mt-10 z-20">
-    <div class="relative">
-      <div class="sticky top-0 h-screen flex flex-col items-center justify-center ">
-        <app-preview></app-preview>
+  <div class="nav-btn-toggle  fixed z-30" (click)="clickEvent()"
+       [ngClass]="status ? 'nav-active' : ''">
+    <div class="nav-but-wrap">
+      <div class="menu-icon hover-target">
+        <span class="menu-icon__line menu-icon__line-left"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line menu-icon__line-right"></span>
       </div>
-      <div class="sticky top-0 h-screen flex flex-col items-center justify-center ">
+    </div>
+  </div>
+  <header class="z-20 fixed w-2/12  top-0" [ngClass]="status ? 'show' : 'hide'">
+    <app-header></app-header>
+
+  </header>
+  <main class="grid">
+
+    <div class="relative w-screen">
+      <div class="contentBox relative h-screen  items-center justify-center w-screen  text-center">
+        <app-preview></app-preview>
+        <span (click)="scroll(shortDescription)" class="arrow-item absolute bottom-0  z-30 text-white mx-auto text-4xl "><ng-icon name="akarArrowDown"></ng-icon></span>
+      </div>
+      <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center ">
         <app-about></app-about>
       </div>
-      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-black">
+      <div class="contentBox relative min-h-screen  items-center justify-center">
         <app-skills></app-skills>
       </div>
-      <div class="sticky top-0 h-screen flex flex-col items-center justify-center ">
-        <h2 class="text-4xl">The Third Title</h2>
-        <p>Scroll Down</p>
-      </div>
-      <div class="sticky top-0 h-screen flex flex-col items-center justify-center ">
-        <h2 class="text-4xl">The Fourth Title</h2>
-      </div>
+<!--      <div class="sticky top-0 h-screen w-screen flex flex-col items-center justify-center ">-->
+<!--        <h2 class="text-4xl">The Third Title</h2>-->
+<!--        <p>Scroll Down</p>-->
+<!--      </div>-->
+<!--      <div class="sticky top-0 h-screen w-screen flex flex-col items-center justify-center ">-->
+<!--        <h2 class="text-4xl">The Fourth Title</h2>-->
+<!--      </div>-->
     </div>
 
 

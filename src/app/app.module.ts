@@ -8,6 +8,9 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PreviewComponent } from './components/preview/preview.component';
 
+import { NgIconsModule } from '@ng-icons/core';
+import { akarLinkedinV2Fill,akarTelegramFill,akarGithubFill,akarArrowDown } from '@ng-icons/akar-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +21,12 @@ import { PreviewComponent } from './components/preview/preview.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIconsModule.withIcons({akarLinkedinV2Fill,akarTelegramFill,akarGithubFill,akarArrowDown})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
