@@ -20,11 +20,22 @@
         <app-preview></app-preview>
         <span (click)="scroll(shortDescription)" class="arrow-item absolute bottom-0  z-30 text-white mx-auto text-4xl "><ng-icon name="akarArrowDown"></ng-icon></span>
       </div>
-      <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center ">
-        <app-about></app-about>
-      </div>
-      <div class="contentBox relative min-h-screen  items-center justify-center">
-        <app-skills></app-skills>
+      <div class="contentBox">
+        <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center ">
+          <div class="border-left-top absolute left-20 top-16"></div>
+          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+          <app-about></app-about>
+        </div>
+        <div class="contentBox relative min-h-screen  items-center justify-center">
+          <div class="border-left-top absolute left-20 top-16"></div>
+          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+          <app-skills></app-skills>
+        </div>
+        <div class="contentBox relative min-h-screen  items-center justify-center">
+          <div class="border-left-top absolute left-20 top-16"></div>
+          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+          <app-my-works></app-my-works>
+        </div>
       </div>
 <!--      <div class="sticky top-0 h-screen w-screen flex flex-col items-center justify-center ">-->
 <!--        <h2 class="text-4xl">The Third Title</h2>-->

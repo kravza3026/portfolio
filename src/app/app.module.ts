@@ -10,6 +10,7 @@ import { PreviewComponent } from './components/preview/preview.component';
 
 import { NgIconsModule } from '@ng-icons/core';
 import { akarLinkedinV2Fill,akarTelegramFill,akarGithubFill,akarArrowDown } from '@ng-icons/akar-icons';
+import { MyWorksComponent } from './components/my-works/my-works.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { akarLinkedinV2Fill,akarTelegramFill,akarGithubFill,akarArrowDown } from
     HeaderComponent,
     AboutComponent,
     SkillsComponent,
-    PreviewComponent
+    PreviewComponent,
+    MyWorksComponent
   ],
   imports: [
     BrowserModule,

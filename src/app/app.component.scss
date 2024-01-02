@@ -1,3 +1,17 @@
+.contentBox{
+  backdrop-filter: blur(6.8px);
+}
+.border-right-bottom,.border-left-top{
+  width: 100px;
+  height: 100px;
+  border-color: #03dac6;
+}
+.border-left-top{
+  border-width: 4px 0 0 4px;
+}
+.border-right-bottom{
+  border-width: 0 4px 4px 0;
+}
 header{
   height: 100svh;
   border-right: 2px solid #03dac6;

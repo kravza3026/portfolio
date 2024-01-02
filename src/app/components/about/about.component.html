@@ -1,39 +1,27 @@
-<section class="min-h-screen container mx-auto">
-  <div class="py-10 text-center">
-    <div class="grid mt-32">
-      <h3 class="text-center text-white text-4xl my-2">About me</h3>
-      <div class="flex flex-wrap justify-between ">
-        <div class="descriptionItem w-4/4 mx-auto  text-xl p-10">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, cum cupiditate debitis delectus esse
-            illo iure laborum minus, molestias mollitia numquam odio, odit perspiciatis provident recusandae reiciendis
-            saepe veritatis voluptatum?
-          </p>
-          <p>Alias aliquid, animi, atque corporis culpa cum deserunt ducimus ea et facere in laboriosam laudantium libero
-            maiores nam, neque odit praesentium provident quod ratione rem sapiente sit temporibus ullam veritatis?
-          </p>
+<style>
+</style>
+<section class="min-h-screen  w-4/5 mx-auto">
+  <div class="h-svh mx-auto py-20  aboutMeContainer text-center">
+
+      <div class="flex flex-wrap justify-between">
+        <div class="shortDescription w-7/12 text-start">
+        <h2 class="text-3xl py-5">WHO AM I?</h2>
+          <h3 class="text-2xl py-5">I'm Christy Smith, a Web Designer & Photographer</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <div class="descriptionItem w-4/12">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor ducimus et, explicabo facere fugiat, illo illum impedit iste laudantium molestiae, odit omnis pariatur praesentium repudiandae saepe similique sint voluptatum.</p>
-        </div>
-        <div class="descriptionItem w-7/12">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor ducimus et, explicabo facere fugiat, illo illum impedit iste laudantium molestiae, odit omnis pariatur praesentium repudiandae saepe similique sint voluptatum.</p>
-        </div>
-        <div class="descriptionItem w-4/12">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor ducimus et, explicabo facere fugiat, illo illum impedit iste laudantium molestiae, odit omnis pariatur praesentium repudiandae saepe similique sint voluptatum.</p>
-        </div>
-        <div class="descriptionItem w-3/12">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor ducimus et, explicabo facere fugiat, illo illum impedit iste laudantium molestiae, odit omnis pariatur praesentium repudiandae saepe similique sint voluptatum.</p>
-        </div>
-        <div class="descriptionItem w-4/12">
-          <h3 class="p-2 text-2xl">Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor ducimus et, explicabo facere fugiat, illo illum impedit iste laudantium molestiae, odit omnis pariatur praesentium repudiandae saepe similique sint voluptatum.</p>
+        <div class="w-4/12 py-5">
+          <div class="progress-item" *ngFor="let item of skills">
+            <div class="mb-1 text-base font-medium dark:text-white flex justify-between">
+              <span>{{item.title}}</span>
+              <span>{{ item.progress }}%</span></div>
+            <div class="w-full {{item.baseColor}} rounded-full h-4 mb-4 dark:{{item.darkColor}}">
+              <div class="bg-cyan-500 h-4 rounded-full dark:bg-gray-300" [ngStyle]="{ 'width.%': item.progress }"></div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
+
 </section>
