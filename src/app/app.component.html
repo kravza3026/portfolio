@@ -16,30 +16,25 @@
   </header>
   <main class="grid">
 
-    <div class="relative w-screen">
-      <div class="contentBox relative h-screen  items-center justify-center w-screen  text-center">
+    <div class="relative container mx-auto">
+      <div class="contentBox  relative h-screen  items-center justify-center   text-center">
         <app-preview></app-preview>
         <span (click)="scroll(shortDescription)" class="arrow-item absolute bottom-0  z-30 dark:text-white mx-auto text-4xl text-gray-700"><ng-icon name="akarArrowDown"></ng-icon></span>
       </div>
 
-        <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center " >
-          <div class="border-left-top absolute left-20 top-16"></div>
-          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+        <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen grid items-center justify-center " >
           <app-about></app-about>
         </div>
         <div class="contentBox relative min-h-screen  items-center justify-center" >
-          <div class="border-left-top absolute left-20 top-16"></div>
-          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+
           <app-skills></app-skills>
         </div>
-        <div class="contentBox relative min-h-screen  items-center justify-center" >
-          <div class="border-left-top absolute left-20 top-16"></div>
-          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+        <div class="contentBox relative min-h-screen  items-center justify-center w-10/12 mx-auto" >
+
           <app-my-works></app-my-works>
         </div>
         <div class="contentBox relative min-h-screen grid items-center justify-center" >
-          <div class="border-left-top absolute left-20 top-16"></div>
-          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+          <div class="border-right-top absolute right-20 top-16"></div>
           <app-timeline></app-timeline>
         </div>
 

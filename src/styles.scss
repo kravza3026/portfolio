@@ -45,5 +45,15 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-
+.border-right-top,.border-left-top{
+  width: 100px;
+  height: 100px;
+  border-color: var(--aqua);
+}
+.border-left-top{
+  border-width: 4px 0 0 4px;
+}
+.border-right-top{
+  border-width: 4px 4px 0 0;
+}
 
