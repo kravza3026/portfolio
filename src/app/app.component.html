@@ -1,11 +1,12 @@
 <div class="content">
+  <app-toggle-mode></app-toggle-mode>
   <div class="nav-btn-toggle  fixed z-30" (click)="clickEvent()"
        [ngClass]="status ? 'nav-active' : ''">
     <div class="nav-but-wrap">
       <div class="menu-icon hover-target">
-        <span class="menu-icon__line menu-icon__line-left"></span>
-        <span class="menu-icon__line"></span>
-        <span class="menu-icon__line menu-icon__line-right"></span>
+        <span class="menu-icon__line menu-icon__line-left bg-gray-900 dark:bg-amber-50"></span>
+        <span class="menu-icon__line bg-gray-900 dark:bg-amber-50"></span>
+        <span class="menu-icon__line menu-icon__line-right bg-gray-900 " [ngClass]="status ? 'dark:bg-amber-50' : 'dark:bg-gray-900'"></span>
       </div>
     </div>
   </div>
@@ -18,32 +19,31 @@
     <div class="relative w-screen">
       <div class="contentBox relative h-screen  items-center justify-center w-screen  text-center">
         <app-preview></app-preview>
-        <span (click)="scroll(shortDescription)" class="arrow-item absolute bottom-0  z-30 text-white mx-auto text-4xl "><ng-icon name="akarArrowDown"></ng-icon></span>
+        <span (click)="scroll(shortDescription)" class="arrow-item absolute bottom-0  z-30 dark:text-white mx-auto text-4xl text-gray-700"><ng-icon name="akarArrowDown"></ng-icon></span>
       </div>
-      <div class="contentBox">
-        <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center ">
+
+        <div #shortDescription id="shortDescription" class="contentBox relative min-h-screen items-center justify-center " >
           <div class="border-left-top absolute left-20 top-16"></div>
           <div class="border-right-bottom absolute right-20 bottom-16"></div>
           <app-about></app-about>
         </div>
-        <div class="contentBox relative min-h-screen  items-center justify-center">
+        <div class="contentBox relative min-h-screen  items-center justify-center" >
           <div class="border-left-top absolute left-20 top-16"></div>
           <div class="border-right-bottom absolute right-20 bottom-16"></div>
           <app-skills></app-skills>
         </div>
-        <div class="contentBox relative min-h-screen  items-center justify-center">
+        <div class="contentBox relative min-h-screen  items-center justify-center" >
           <div class="border-left-top absolute left-20 top-16"></div>
           <div class="border-right-bottom absolute right-20 bottom-16"></div>
           <app-my-works></app-my-works>
         </div>
-      </div>
-<!--      <div class="sticky top-0 h-screen w-screen flex flex-col items-center justify-center ">-->
-<!--        <h2 class="text-4xl">The Third Title</h2>-->
-<!--        <p>Scroll Down</p>-->
-<!--      </div>-->
-<!--      <div class="sticky top-0 h-screen w-screen flex flex-col items-center justify-center ">-->
-<!--        <h2 class="text-4xl">The Fourth Title</h2>-->
-<!--      </div>-->
+        <div class="contentBox relative min-h-screen grid items-center justify-center" >
+          <div class="border-left-top absolute left-20 top-16"></div>
+          <div class="border-right-bottom absolute right-20 bottom-16"></div>
+          <app-timeline></app-timeline>
+        </div>
+
+
     </div>
 
 

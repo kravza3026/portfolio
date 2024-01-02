@@ -4,7 +4,7 @@
 .border-right-bottom,.border-left-top{
   width: 100px;
   height: 100px;
-  border-color: #03dac6;
+  border-color: var(--aqua);
 }
 .border-left-top{
   border-width: 4px 0 0 4px;
@@ -14,7 +14,7 @@
 }
 header{
   height: 100svh;
-  border-right: 2px solid #03dac6;
+  border-right: 2px solid var(--aqua);
   box-shadow: 5px 0 18px -1px rgba(251, 253, 253, 0.7);
   background-color: var(--base-color);
   &.show{
@@ -69,7 +69,6 @@ header{
   height: 2px;
   width: 30px;
   display: block;
-  background-color: #fff;
   margin-bottom: 7px;
   cursor: pointer;
   -webkit-transition: background-color .5s ease, -webkit-transform .2s ease;

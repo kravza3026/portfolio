@@ -11,6 +11,8 @@ import { PreviewComponent } from './components/preview/preview.component';
 import { NgIconsModule } from '@ng-icons/core';
 import { akarLinkedinV2Fill,akarTelegramFill,akarGithubFill,akarArrowDown } from '@ng-icons/akar-icons';
 import { MyWorksComponent } from './components/my-works/my-works.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { ToggleModeComponent } from './components/toggle-mode/toggle-mode.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MyWorksComponent } from './components/my-works/my-works.component';
     AboutComponent,
     SkillsComponent,
     PreviewComponent,
-    MyWorksComponent
+    MyWorksComponent,
+    TimelineComponent,
+    ToggleModeComponent
   ],
   imports: [
     BrowserModule,

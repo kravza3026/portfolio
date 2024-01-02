@@ -1,24 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --base-color: rgb(25, 25, 25);
+  --aqua: #03dac6;
   --shadow-color: #04293A;
   --texture-color: #064663;
   --text-color: #ECB365;
 }
 
-
+@import "aos/dist/aos.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
   //background-image: url("/assets/images/bg.jpg");
-  background-color: #191919;
+
   overflow-x: hidden;
 
 }
-
-
+* {
+  @apply transition-colors duration-500;
+}
 body {
   --sb-track-color: #232E33;
   --sb-thumb-color: #2be0e2;

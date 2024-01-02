@@ -1,8 +1,9 @@
 
 .light {
   position: fixed;
-  height: 70vh;
-  width: 0;
+  height: 1px;
+  width: 1px;
+  border-radius: 1px;
   opacity: .75;
   background-color: white;
   box-shadow: #9f0792 0 0 0 1px;
@@ -180,49 +181,74 @@
     }
   }
 }
-h1 {
-  margin: 0;
-  font-weight: 400;
+
+
+.cube-container {
+  width: 100px;
+  height: 100px;
+  perspective: 800px;
+  margin: 20px auto;
+}
+
+.cube {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  transform-style: preserve-3d;
+  animation: rotate 30s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: rgb(214, 21, 21);
+  font-size: 18px;
   text-align: center;
-  text-transform: uppercase;
-  font-family: "Gochi Hand", cursive;
-  color: #fff;
-  z-index: 20;
+  line-height: 100px;
+  background: transparent;
+  opacity: 0.9;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ff6b6b, #355c7d, #557d35) 1;
+  //box-shadow: 0 0 100px rgba(245, 8, 8, 0.8);
 }
-//.flicker{
-//  animation: flicker 30s ease infinite 3s;
-//}
-//.neon {
-//  position: relative;
-//  z-index: 20;
-//  text-shadow: 0 0 5px #150101, 0 0 10px #1f0101, 0 0 20px #0ff, 0 0 30px #0ff,
-//  0 0 0px #0ff, 0 0 2px #0ff, 0 0 40px #0ff, 0 0 20px #0ff,
-//  0 0 10px #0ff;
-//}
-@keyframes flicker {
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cube-container:hover .cube {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
   0% {
-    text-shadow: none;
+    transform: rotateX(0) rotateY(0) rotateZ(0);
   }
-  6% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff,
-    0 0 40px #0ff, 0 0 20px #0ff, 0 0 140px #0ff, 0 0 20px #0ff,
-    0 0 100px #0ff;
-  }
-  8% {
-    text-shadow: none;
-  }
-  10% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff,
-    0 0 40px #0ff, 0 0 20px #0ff, 0 0 10px #0ff, 0 0 20px #0ff,
-    0 0 50px #0ff;
-  }
-  12% {
-    text-shadow: none;
-  }
-  14% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff,
-    0 0 40px #0ff, 0 0 20px #0ff, 0 0 10px #0ff, 0 0 20px #0ff,
-    0 0 50px #0ff;
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
+
 
