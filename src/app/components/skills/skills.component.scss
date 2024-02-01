@@ -1,15 +1,5 @@
-*{
-  margin: 0;
-  padding: 0;
-
-}
-
-h1{
-  font-size: 2.5rem;
-  font-family: 'Montserrat';
-  font-weight: normal;
-  text-align: center;
-  margin: 2rem 0;
+:host{
+  width: 100%!important;
 }
 
 .wrapper{
