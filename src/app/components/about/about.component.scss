@@ -1,3 +1,4 @@
+
 .aboutMeContainer{
   /* From https://css.glass */
 
@@ -5,7 +6,12 @@
  color: white;
 }
 
-
+:host{
+  width: 100%!important;
+  overflow-y: hidden;
+  height: 100%;
+  position: relative;
+}
 
 
 

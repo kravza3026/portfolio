@@ -1,7 +1,18 @@
+.myWorksContainer{
+  width: 90%;
+  margin: 10px auto;
+  padding: 15px;
+}
 .workItem{
   transition: 1s ease;
   &:hover{
   transform: scale(1.1);
   transition: 1s ease;
+    ;
   }
+}
+:host{
+  margin: auto;
+  overflow-y: auto;
+
 }
