@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import  {trigger, transition, useAnimation}  from  "@angular/animations";
-import  {rotateGlueFromLeft}  from  "ngx-router-animations";
+import  {rotateFlipToTop}  from  "ngx-router-animations";
 // @ts-ignore
 import AOS from 'aos';
 
@@ -9,7 +9,7 @@ import AOS from 'aos';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('rotateFlipToLeft', [ transition('* => *', useAnimation(rotateGlueFromLeft,{
+    trigger('rotateFlipToLeft', [ transition('* => *', useAnimation(rotateFlipToTop,{
         params: {enterTiming: '0.75', leaveTiming: '0.75', enterDelay: '0', leaveDelay: '0'}
       }
     ))])
